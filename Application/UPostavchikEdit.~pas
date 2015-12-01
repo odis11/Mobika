@@ -1,0 +1,40 @@
+unit UPostavchikEdit;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, Mask, ExtCtrls;
+
+type
+  TfPostavchikEdit = class(TForm)
+    Panel1: TPanel;
+    LabeledEdit1: TLabeledEdit;
+    MaskEdit1: TMaskEdit;
+    Label1: TLabel;
+    LabeledEdit2: TLabeledEdit;
+    LabeledEdit3: TLabeledEdit;
+    procedure FormKeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  fPostavchikEdit: TfPostavchikEdit;
+
+implementation
+
+uses UAuth, UDM, UMain;
+
+{$R *.dfm}
+
+procedure TfPostavchikEdit.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+if key=VK_ESCape then Close;
+end;
+
+end.
